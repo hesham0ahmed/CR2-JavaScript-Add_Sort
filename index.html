@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/scss/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <!-- Load font awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>myPlanner</title>
+ 
+</head>
+<body id="body">
+<!-- NAVBAR START -->
+<div id="menu">
+  <a href="#" class="topbar"><img src="/image/logoTodo.png" alt="" class="logo"></a>
+  <div id="myNav" class="overlay">
+<!-- CLOSE X BUTTON TO CLOSE OPEN MENU -->
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<!-- LINKS IN OPEN MENU -->
+<div class="overlay-content">
+  <a href="#section-1">Tasks</a>
+  <a href="#">Settings</a>
+  <a href="#">About</a>
+  <a href="#section-2">Contact</a>
+  </div>
+</div>
+<!-- MENU LOGO TO OPEN THE MENU -->
+<span id="menuClick" onclick="openNav()" style="cursor:grab;">M<img src="image/menu.png" alt="" id="menuLogo">NU</span>
+<div id="menuItem">
+ <a href="#"></a>
+ <!-- MY ACCOUNT BUTTON AND REAL TIME INCLUDED -->
+    <button id="liveAlertBtn">my Account<p class="font-monospace" style="font-size: smaller;"><span id="time"> </span></p></button>
+  </div>
+</div>
+<div id="liveAlertPlaceholder"></div>
+<!-- NAVBAR END-->
+<!-- HEADER -->
+<header>
+<section class="bgimage mb-3 ">
+<div class="container-fluid">
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <h2 class="text-center bg-black bg-opacity-50 m-5 p-5 rounded-4">myPlanner</h2>
+  </div>
+</div>
+</div>
+</section>
+</header>
+<!-- HEADER -->
+<!-- SORT BUTTON -->
+<button id="sortButton" class="btn btn-info m-2" onclick="sortList()">Sort</button>
+<!-- SORT BUTTON -->
+<div id="info"></div>
+<div class="container" id="section-1">
+  <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-2 row-cols-xs-1" id="result">
+  </div>
+</div>
+<!-- FOOTER -->
+<footer class="text-center text-dark" id="section-2">
+<div class="footCol bg-secondary ">
+<section class="p-3 pb-2">
+  <a href="#"><i class="fa fa-facebook-square me-4" style="font-size:25px;color:black"></i></a>
+  <a href="#"><i class="fa fa-twitter me-4" style="font-size:25px;color:black"></i></a>
+  <a href="#"><i class="fa fa-google me-4" style="font-size:25px;color:black"></i></a>
+  <a href="#"><i class="fa fa-instagram me-4" style="font-size:25px;color:black"></i></a>
+  <a href="#"><i class="fa fa-linkedin me-4" style="font-size:25px;color:black"></i></a>
+  <a href="#"><i class="fa fa-github me-4" style="font-size:25px;color:black"></i></a>
+</section><form>
+  <div class="container">
+    <input type="text" placeholder="Email address" name="mail" required>
+  </div>
+  <div class="container">
+    <input type="submit" value="Subscribe">
+  </div>
+</form>
+<p>© 2023 Copyright h0a</p></div>
+</footer>
+<!-- FOOTER END -->
+  <script src="/js/script.js"></script>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

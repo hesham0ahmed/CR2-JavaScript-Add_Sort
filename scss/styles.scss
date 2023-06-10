@@ -1,0 +1,207 @@
+@import "variables";
+
+#body {
+  display:flexbox;
+  // background:  rgba(0, 0, 0, 0.138);
+}
+// ---IMPORTANCE NUMBER PILL---
+#numb {
+display: flex;
+margin-bottom: 50px;
+}
+// ---TOP MENU BAR FULL---
+#menu {
+  // position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  background: $bgMenu;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 10px $boxShadow;
+// ---LOGO myPlannar LOGO---
+.topbar {
+  background: none;
+}  
+// ---MENU LOGO MIDDLE---
+#menuLogo {
+  height: 15px;
+  width: 11px;
+  padding-bottom: 2px;
+}
+// ---MENU TEXT MIDDLE---
+#menuClick {
+padding-top: 5.5px;
+transition: 0.2s ease;
+  &:hover {
+    font-weight:600;
+    transform: scale(1.8);
+    transition: 0.2s ease;
+    padding-top: 10px;
+    color: $bgColor;
+    text-shadow: 0px 3px 2px $textShadow;
+    }
+} 
+// ---OPEN MENU FROM LEFT SIDE---
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: $footCol;
+  background-color: $menuShadow;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+// ---CONTENT FROM OPEN MENU---
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+// ---NAVIGATION LINKS FROM OPEN MENU---
+.overlay a {
+  // padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s
+}
+// ---NAVIGATION HOVER LINKS FROM OPEN MENU---
+.overlay a:hover, .overlay a:focus {
+  color: aqua;
+  transform: scale(1.2);
+  font-variant: small-caps;
+}
+// ---CLOSE X BUTTON FROM OPEN MENU---
+.overlay .closebtn {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  font-size: 60px;
+}
+// ---myACCOUNT BUTTON TOP RIGHT---
+#liveAlertBtn {
+  background: rgba(244, 244, 244, 0.573);
+  height: 50px;
+  width: 140px;
+  border: solid $bgColor;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 30px;
+  border-left-color: $bgColor;
+  font-weight:light;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    text-shadow: 2px 2px 4px $textShadow;
+    transition: all 0.5s ease-in-out;
+    background: $bgColor;
+    width: 180px;
+    border: 2;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 20px;
+    border-left-color: rgba(92, 92, 92, 0.129);
+    font-weight:600;
+    &:active {
+      text-shadow: 2px 2px 4px #00000063;
+      transition: all 0.5s ease-in-out;
+      background: rgba(0, 208, 255, 0.508);
+      width: 110px;
+      border: 2;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      border-bottom-left-radius: 2px;
+      border-top-left-radius: 20px;
+      border-left-color: rgba(92, 92, 92, 0.129);
+      font-weight:600;
+    }
+  }
+}
+// ---LOGO SHAKER---
+.logo {
+display: flex;
+padding: 1px 10px;
+// background: red;
+max-inline-size: 150px;
+&:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite; // INFINITY ANIMATION
+  }
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+   }
+  }
+}
+// ---CONTAINER BEHIND THE CARDS---
+.container {
+  align-items: center;
+  justify-content: center;
+  // background: rgba(128, 128, 128, 0.148);
+}
+// ---FOOTER---
+.footer {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  padding: 20px;
+  background-color: $footCol;
+  font-weight: 600;
+  color: $bgColor;
+  .liFooter {
+  display: contents;
+  justify-content: space-around;
+  align-items: space-around;
+  }
+}
+// ------IMPORTET------------
+.bgimage {
+  width:100%;
+  height:200px;
+  background: url('/image/header1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  background-attachment:local;
+}
+.bgimage h2 {
+  color:white;
+  text-shadow:2px 2px #333;
+}
+form {
+  font-family: Arial;
+}
+input[type=text], input[type=submit] {
+  width: 100%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+}
+input[type=submit]:hover {
+  opacity: 0.8;
+}
