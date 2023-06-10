@@ -87,7 +87,6 @@ for (let todos of todo) {
         <a class="btn btn-outline-info">Reset to 0</a>
       </div>
     </div>
-    
   `;
 }
 //--------------COLOR COUNTER--------------
@@ -173,7 +172,6 @@ function sortList() {
     const indexA = Array.prototype.indexOf.call(cards, a);
     const indexB = Array.prototype.indexOf.call(cards, b);
     return todo[indexB].level - todo[indexA].level;
-    console.log(level);
   });
 
   for (let i = 0; i < sortedCards.length; i++) {
@@ -182,32 +180,8 @@ function sortList() {
 console.log("sortButton:", sortedCards);
   list.appendChild(fragment);
 }
-
 // Call the sortList() function when the Sort button is clicked
 document.getElementById("sortButton").addEventListener("click", sortList);
-
-console.log(updateCounterColor);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // -----ALERT BUTTON----- //
 const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 const appendAlert = (message, type) => {
@@ -236,4 +210,3 @@ function closeNav() {
   // document.getElementById("myNav").style.width = "0%";
   document.getElementById("myNav").style.width = "0";
 }
-
