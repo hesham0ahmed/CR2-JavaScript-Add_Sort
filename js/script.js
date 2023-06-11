@@ -165,48 +165,20 @@ function refreshTime() {
 setInterval(refreshTime, 1000);
 //--------------SORT ENGINE--------------
 function sortList() {
-  const list = document.getElementById("content");
-  const cards = list.getElementsByClassName("cardContent");
-  const fragment = document.createDocumentFragment();
-
+  const list = document.getElementById("result");
+  const cards = list.getElementsByClassName("card");
   const sortedCards = Array.from(cards).sort((a, b) => {
-    const indexA = Array.prototype.indexOf.call(cards, a);
-    const indexB = Array.prototype.indexOf.call(cards, b);
-    return todo[indexB].level - todo[indexA].level;
-    console.log(level);
+    const levelA = parseInt(a.querySelector(".mylevel").textContent);
+    const levelB = parseInt(b.querySelector(".mylevel").textContent);
+    return levelB - levelA;
   });
 
   for (let i = 0; i < sortedCards.length; i++) {
     list.appendChild(sortedCards[i]);
   }
-console.log("sortButton:", sortedCards);
-  list.appendChild(fragment);
 }
-
-// Call the sortList() function when the Sort button is clicked
+// -----SORT BUTTON----- //
 document.getElementById("sortButton").addEventListener("click", sortList);
-
-console.log(updateCounterColor);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // -----ALERT BUTTON----- //
 const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
